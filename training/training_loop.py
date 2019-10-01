@@ -192,6 +192,7 @@ def training_loop(
             peak_gpu_mem_op = tf.constant(0)
 
     print('Setting up snapshot image grid...')
+    print('this is the type of trainingset',type(training_set))
     grid_size, grid_reals, grid_labels, grid_latents = misc.setup_snapshot_image_grid(G, training_set, **grid_args)
     sched = training_schedule(cur_nimg=total_kimg*1000, training_set=training_set, num_gpus=submit_config.num_gpus, **sched_args)
     grid_fakes = Gs.run(grid_latents, grid_labels, is_validation=True, minibatch_size=sched.minibatch//submit_config.num_gpus)
