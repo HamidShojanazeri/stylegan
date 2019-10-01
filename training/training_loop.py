@@ -144,7 +144,7 @@ def training_loop(
 
     # Load training set.
     training_set = dataset.load_dataset(data_dir=config.data_dir, verbose=True, **dataset_args)
-
+    print('THhis is the type of training set inside the training loop',type(training_set))
     # Construct networks.
     with tf.device('/gpu:0'):
         if resume_run_id is not None:
