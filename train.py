@@ -154,7 +154,7 @@ if 0:
     # Numerical precision (choose one).
     desc += '-fp32'; sched.max_minibatch_per_gpu = {256: 16, 512: 8, 1024: 4}
     #desc += '-fp16'; G.dtype = 'float16'; D.dtype = 'float16'; G.pixelnorm_epsilon=1e-4; G_opt.use_loss_scaling = True; D_opt.use_loss_scaling = True; sched.max_minibatch_per_gpu = {512: 16, 1024: 8}
-    print('we are here in SGAN')
+    print('we are here in PGAN')
     # Disable individual features.
     #desc += '-nogrowing'; sched.lod_initial_resolution = 1024; sched.lod_training_kimg = 0; sched.lod_transition_kimg = 0; train.total_kimg = 10000
     #desc += '-nopixelnorm'; G.use_pixelnorm = False
