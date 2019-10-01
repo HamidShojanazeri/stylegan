@@ -154,6 +154,7 @@ def training_loop(
         else:
             print('Constructing networks...')
             G = tflib.Network('G', num_channels=training_set.shape[0], resolution=training_set.shape[1], label_size=training_set.label_size, **G_args)
+            print('Number of chanels resolution and label size',training_set.shape[0],training_set.shape[1],label_size=training_set.label_size)
             D = tflib.Network('D', num_channels=training_set.shape[0], resolution=training_set.shape[1], label_size=training_set.label_size, **D_args)
             Gs = G.clone('Gs')
     G.print_layers(); D.print_layers()
