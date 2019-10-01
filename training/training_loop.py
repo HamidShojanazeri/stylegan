@@ -209,6 +209,7 @@ def training_loop(
     print('Training...\n')
     ctx.update('', cur_epoch=resume_kimg, max_epoch=total_kimg)
     maintenance_time = ctx.get_last_update_interval()
+    print('got the update')
     cur_nimg = int(resume_kimg * 1000)
     cur_tick = 0
     tick_start_nimg = cur_nimg
